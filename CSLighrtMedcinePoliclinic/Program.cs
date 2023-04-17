@@ -7,19 +7,19 @@ namespace CSLighrtMedcinePoliclinicN8
         static void Main(string[] args)
         {
             int queueOldLadies;
-            int timeReceipt = 10;
-            int oneHour = 60;
-            int hours;
-            int minutes;
+            int timeReceiptInMinutes = 10;
+            int munutesPerHour = 60;
+            int waitingTimeInHours;
+            int waitingTimeInMinutes;
 
             Console.Write("Введите количество старушек: ");
             queueOldLadies = Convert.ToInt32(Console.ReadLine());
 
-            hours = queueOldLadies * timeReceipt / oneHour;
-            minutes = queueOldLadies * timeReceipt % oneHour;
+            waitingTimeInHours = queueOldLadies * timeReceiptInMinutes / munutesPerHour;
+            waitingTimeInMinutes = queueOldLadies * timeReceiptInMinutes % munutesPerHour;
 
             Console.WriteLine($"Вы должны отстоять в очереди: " +
-                              $"{hours} часа и {minutes} минут.");
+                              $"{waitingTimeInHours} часа и {waitingTimeInMinutes} минут.");
             Console.ReadLine();
         }
     }
